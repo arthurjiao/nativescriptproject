@@ -1,0 +1,31 @@
+
+.top1 {
+    /* border-top-width: 1;
+    border-top-color: black; */
+
+    font:25
+
+}
+
+.mytop2 {
+    border-top-width: 2;
+    border-top-color: black;
+    border-bottom-width: 1;
+    border-bottom-color: black;
+
+    background-color:#2A76E3;
+    color:white;
+    text-align: center;
+    font:25;
+}
+
+.mysite {
+    border-top-width: 1;
+    border-top-color: black;
+    /* border-bottom-width: 1;
+    border-bottom-color: black; */
+
+    color:black;
+    text-align: center;
+    font:10;
+}

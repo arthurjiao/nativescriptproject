@@ -1,0 +1,39 @@
+<ActionBar style="background-color: #2A76E3;" class="action-bar">
+    <GridLayout row="0" columns="auto,*,auto,auto"  class="top1">
+        <Image width="30" height="30" stretch="aspectFill"  src="~/images/row.jpg"  col="0"></Image>
+        
+        <label style="color:white;text-align: center;font:25" text="Scheduling" col="1"></label>
+        <Image width="30" height="30" src="~/images/square.jpg" col="2"></Image>
+        <Image width="30" height="30" src="~/images/Dpic.jpg"  col="3"></Image>
+    </GridLayout>
+
+    
+</ActionBar>
+
+<StackLayout >
+    <GridLayout class="mysite"  rows="auto,auto,auto" columns="auto,auto,*">
+        <label  style="color:black;text-align: left;font:10" row="0" col="2" [text]="sitename"></label>
+        <label style="color:black;text-align: left;font:10" row="1" col="2" [text]="mainaddress"></label>
+        <label  style="color:black;text-align: left;font:10" row="2" col="2" [text]="contact"></label>
+    
+        <Image width="40" height="40" stretch="aspectFill"  src="~/images/theimg.jpg"  row="0" col="1" rowSpan="3"></Image>  
+        <Image width="40" height="40" stretch="aspectFill"  src="~/images/larrow.jpg" (tap)="goBack()" row="0" col="0" rowSpan="3"></Image>  
+        
+
+    </GridLayout>
+    <Image width="100%" height="200" src="~/images/space.jpg"  ></Image>
+    <GridLayout class="dsite"  rows="auto,auto,auto,auto,auto" columns="auto,*">
+        <Image width="20" height="20" stretch="aspectFill"  src="~/images/person.jpg"  row="0" col="0" rowSpan="2"></Image>  
+        <Image width="20" height="20" stretch="aspectFill"  src="~/images/tele.jpg"  row="2" col="0"></Image>  
+        <Image width="20" height="20" stretch="aspectFill"  src="~/images/mail.jpg"  row="3" col="0" ></Image>  
+        <Image width="20" height="20" stretch="aspectFill"  src="~/images/location.jpg"  row="4" col="0" ></Image>  
+        <label  height="20" style="color:black;text-align: left;font:15;vertical-align:middle;" row="0" col="1" [text]="contact"></label>
+        <label height="20" style="color:black;text-align: left;font:15;vertical-align:middle;" row="1" col="1" [text]="jobtitle"></label>
+        <label height="60" style="color:black;text-align: left;font:15;vertical-align:middle;" row="4" col="1" [text]="address"></label>
+        <label height="40" style="color:black;text-align: left;font:15;vertical-align:middle;" row="2" col="1" [text]="tel"></label>
+        <label height="40" style="color:black;text-align: left;font:15;vertical-align:middle;" row="3" col="1" [text]="email"></label>
+    
+    
+    
+    </GridLayout>
+</StackLayout>

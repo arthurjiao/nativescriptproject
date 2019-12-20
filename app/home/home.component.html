@@ -1,0 +1,47 @@
+<ActionBar style="background-color: #2A76E3;" class="action-bar">
+    <GridLayout row="0" columns="auto,*,auto,auto"  class="top1">
+        <Image width="30" height="30" stretch="aspectFill"  src="~/images/row.jpg"  col="0"></Image>
+        
+        <label style="color:white;text-align: center;font:25" text="Scheduling" col="1"></label>
+        <Image width="30" height="30" src="~/images/square.jpg" col="2"></Image>
+        <Image width="30" height="30" src="~/images/Dpic.jpg"  col="3"></Image>
+    </GridLayout>
+
+    
+</ActionBar>
+
+<StackLayout >
+
+    <label  class="mytop2" text="Sites" ></label>
+    <GridLayout row="0" columns="auto,*,auto,auto" style="height:20">
+        <label style="color:black;text-align: center" text="All Sites" col="0"></label>
+        <Image width="30" height="30" stretch="aspectFill"  src="~/images/darrow.jpg"  (tap)="load()" col="1"></Image>    
+        
+        <Image width="30" height="30" src="~/images/down.jpg"  col="2"></Image>
+        <Image width="30" height="30" src="~/images/search.jpg" (tap)="showSearch()" col="3"></Image>
+    </GridLayout>
+
+    <GridLayout height="40" *ngIf="show" columns="*, auto" >
+        <TextField #skeyTextField [(ngModel)]="skey" hint="Enter a site name" (returnPress)="onReturnPress($event)" col="0"></TextField>
+        <Image width="40" height="40" src="~/images/search.jpg" (tap)="onSearch()" col="1"></Image>
+      </GridLayout>
+    <StackLayout >
+
+
+        <ListView [items]="siteList" >
+            <ng-template let-item="item">
+                <GridLayout  class="mysite" height=45 rows="auto,auto,auto" columns="auto,*,auto">
+                    <Image  width="40" height="40" stretch="aspectFill"  src="~/images/theimg.jpg"  row="0" col="0" rowSpan="3"></Image>  
+                    
+                        <label  style="color:black;text-align: left;font:15" row="0" col="1" (tap)="toSite(item)" [text]="item.sitename"></label>
+                        <label style="color:black;text-align: left;font:15" row="1" col="1" (tap)="toSite(item)" [text]="item.address"></label>
+                        <label  style="color:black;text-align: left;font:15" row="2" col="1" (tap)="toSite(item)" [text]="item.contact"></label>
+                    
+                    <Image width="40" height="40" stretch="aspectFill"  src="~/images/rarrow.jpg" (tap)="toSite(item)" row="0" col="2" rowSpan="3"></Image>  
+                </GridLayout>
+             </ng-template>
+        </ListView>
+    
+    </StackLayout>
+</StackLayout>
+
